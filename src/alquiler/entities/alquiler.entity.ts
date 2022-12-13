@@ -1,6 +1,4 @@
-import { Carro } from "src/carros/entities/carro.entity";
-import { Cliente } from "src/clientes/entities/cliente.entity";
-import { Entity, Column, PrimaryGeneratedColumn, CreateDateColumn, UpdateDateColumn, ManyToOne, OneToMany } from "typeorm";
+import { Entity, Column, PrimaryGeneratedColumn, CreateDateColumn} from "typeorm";
 
 @Entity()
 export class RegistroAlquiler {
@@ -10,12 +8,14 @@ export class RegistroAlquiler {
     fechaSalida: string;
     @Column({default: "No entregado"})
     fechaEntrada: string;
-    @Column()
-    idCarro: number;
-
-    @OneToMany(() => Carro, car => car.placas)
-    carro: Carro
-    
+    @Column({default: "Placas"})
+    placas: string;
+    @Column({default: "Cliente"})
+    cliente: string;
+    @Column({default: "Email"})
+    email: string;
+    @Column({default: "Telefono"})
+    telefono: string
 
 }
 

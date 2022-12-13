@@ -5,4 +5,7 @@ export class CreateAlquilerDto {
     @IsNumber( {allowNaN:false}, {message: ValidationMessages.ES_NUMERO})
     @Min(0)
     idCarro: number;
+    @IsNumber( {allowNaN:false}, {message: ValidationMessages.ES_NUMERO})
+    @Min(0)
+    idCliente: number;
 }

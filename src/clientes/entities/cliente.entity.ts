@@ -15,5 +15,4 @@ export class Cliente {
     email: string;
     @CreateDateColumn()
     createdAt: Date;
-
 }

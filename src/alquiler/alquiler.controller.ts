@@ -23,12 +23,8 @@ export class AlquilerController {
   }
 
   @Patch(':id')
-  update(@Param('id') id: string, @Body() updateAlquilerDto: UpdateAlquilerDto) {
-    return this.alquilerService.update(+id, updateAlquilerDto);
+  update(@Param('id') id: number) {
+    return this.alquilerService.checkout(id);
   }
 
-  @Delete(':id')
-  remove(@Param('id') id: string) {
-    return this.alquilerService.remove(+id);
-  }
 }

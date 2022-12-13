@@ -23,8 +23,4 @@ export class Carro {
 
     @ManyToOne(() => Distribuidores, dis => dis.nombreComercial)
     distribuidor: Distribuidores
-    @OneToMany(() => RegistroAlquiler, r => r.folio)
-    registros: RegistroAlquiler[]
-
-
 }
